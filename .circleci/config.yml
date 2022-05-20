@@ -17,13 +17,13 @@ jobs:
           name: install dependencies
           command:
             python3 -m venv venv
-            .venv/bin/activate
-            pip install --upgrade
+            . venv/bin/activate
+            pip install --upgrade pip
             pip install -r requirements.txt
       - run:
           name: run test
           command:
-            source .venv/bin/activate
+            source . venv/bin/activate
             pytest test_kadai_1_NormalScreenShot.py -v --junit-xml=test-results/regression/results.xml
       - store_test_results:
           path: test-results
