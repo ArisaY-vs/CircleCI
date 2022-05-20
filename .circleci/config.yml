@@ -1,11 +1,11 @@
-version: 2.1​
-orbs:​
-  browser-tools: circleci/browser-tools@1.2.3​
-jobs:​
+version: 2.1
+orbs:
+  browser-tools: circleci/browser-tools@1.2.3
+jobs:
   build:
     docker:
-      - image: cimg/python:3.10.1-browsers​
-    working_directory: ~/repo​
+      - image: cimg/python:3.10.1-browsers
+    working_directory: ~/repo
     steps:
       - browser-tools/install-browser-tools
       - checkout
