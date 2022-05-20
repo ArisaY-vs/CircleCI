@@ -23,7 +23,7 @@ jobs:
       - run:
           name: run test
           command:
-            . venv/bin/activate
+            source .venv/bin/activate
             pytest test_kadai_1_NormalScreenShot.py -v --junit-xml=test-results/regression/results.xml
       - store_test_results:
           path: test-results
